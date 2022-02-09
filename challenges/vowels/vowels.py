@@ -13,3 +13,8 @@ if __name__ == '__main__':
         print('Correct')
     else:
         print('Incorrect, your answer for the second case was {}, the correct value is {} '.format(result, '0'))
+    result = get_count('afghecdfo')
+    if result == 3:
+        print('Correct')
+    else:
+        print('Incorrect, your answer for the second case was {}, the correct value is {} '.format(result, '3'))
