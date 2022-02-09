@@ -1,10 +1,10 @@
 John likes to go to the cinema. He can choose between system A and system B.
 
-System A : he buys a ticket (15 dollars) every time
+System A : He buys a ticket (15 dollars) every time
 
 
-System B : he buys a card (500 dollars) and a first ticket for 0.90 times the ticket price, 
-then for each additional ticket he pays 0.90 times the price paid for the previous ticket.
+System B : He buys a card (500 dollars) and a first ticket for 90% of a normal ticket price (15 dollars). 
+Then, for each additional ticket he pays 90% of price he paid for the previous ticket.
 
 
 Example:
@@ -12,11 +12,14 @@ If John goes to the cinema 3 times:
 
 System A : 15 * 3 = 45
 
-System B : 500 + 15 * 0.90 + (15 * 0.90) * 0.90 + (15 * 0.90 * 0.90) * 0.90 ( = 536.5849999999999, no rounding for each ticket)
+System B : 
+1st ticket = 15 * 0.90 = 13.5
+2nd ticket = 13.5 * 0.90 = 12.15
+3rd ticket = 12.15 * 0.90 = 10.935
+Ticket Total = 13.5 + 12.15 + 10.935 = 36.585
+Ticket Total + Card (500) = 500 + 36.585 = 536.585
 
-
-
-**John wants to know how many times he must go to the cinema so that the final result of System B, when rounded up to the next dollar, will be cheaper than System A.**
+**John wants to know how many tickets he must buy using system B for it to be a cost effective choice when compared to buying tickets using system A. 
 
 The function movie has 3 parameters: card (price of the card), ticket (normal price of a ticket), perc (fraction of what he paid for the previous ticket) and returns the first n such that
 
